@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import requests
 import random
+import emoji
+import emojis
 
 bot = commands.Bot(command_prefix='+', intents=discord.Intents().all())
 
@@ -28,7 +30,8 @@ async def duck(ctx):
 
 @bot.command('rmot')
 async def cute(ctx):
-    a = ['Ты лучший', 'У тебя всё получится', 'Удачи тебе']
+    a = ['Ты лучший :red_heart:',
+         'У тебя всё получится :thumbsup:', 'Удачи тебе :smile:']
     b = random.randint(0, 2)
     await ctx.reply(a[b])
     c = ['project/cat1.jpg', 'project/cat2.jpg', 'project/cat3.jpg',
@@ -102,3 +105,4 @@ async def concrete(ctx):
 
 
 bot.run('TOKEN')
+
